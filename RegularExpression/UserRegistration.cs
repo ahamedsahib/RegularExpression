@@ -8,14 +8,21 @@ namespace RegularExpression
          
         public void NameCheck()
         {
-            string NamePattern = "^[A-Z]{1}[a-z]{2,}";
+            string NamePattern = "^[A-Z]{1}[a-z]{2,}$";
             Console.WriteLine("Enter First Name ");
             string Firstname = Console.ReadLine();
-            Console.WriteLine(Regex.IsMatch(Firstname, NamePattern)?$"{Firstname}is Valid":$"{Firstname} Invalid!! Name Start with Capital and must contain atleast 3 characters!");
+            Console.WriteLine(Regex.IsMatch(Firstname, NamePattern)?$"{Firstname} is Valid":$"{Firstname} Invalid!! Name Start with Capital and must contain atleast 3 characters!");
             Console.WriteLine("Enter Last Name ");
             string Lastname = Console.ReadLine();
-            Console.WriteLine(Regex.IsMatch(Lastname, NamePattern) ? $"{Lastname}is Valid" : $"{Lastname} Invalid!! Name Start with Capital and must contain atleast 3 characters!");
+            Console.WriteLine(Regex.IsMatch(Lastname, NamePattern) ? $"{Lastname} is Valid" : $"{Lastname} Invalid!! Name Start with Capital and must contain atleast 3 characters!");
 
+        }
+        public void EmailCheck()
+        {
+            string emailPattern = @"^abc([+.-_]{1}\w[^_]+)?@[a-z0-9]+\.[a-z]{2,3}(\.[a-z]{2})?$";
+            Console.WriteLine("Enter your Email ID");
+            String email = Console.ReadLine();
+            Console.WriteLine(Regex.IsMatch(email, emailPattern) ? $"{email} is Valid" : $"{email} Invalid!!");
         }
 
     }
