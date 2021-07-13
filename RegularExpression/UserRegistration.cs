@@ -19,10 +19,17 @@ namespace RegularExpression
         }
         public void EmailCheck()
         {
-            string emailPattern = @"^abc([+.-_]{1}\w[^_]+)?@[a-z0-9]+\.[a-z]{2,3}(\.[a-z]{2})?$";
+            string emailPattern = @"^abc([+.-_]{1}\w+)?@[a-z0-9]+\.[a-z]{2,3}(\.[a-z]{2})?$";
             Console.WriteLine("Enter your Email ID");
             String email = Console.ReadLine();
             Console.WriteLine(Regex.IsMatch(email, emailPattern) ? $"{email} is Valid" : $"{email} Invalid!!");
+        }
+        public void PhoneNumber()
+        {
+            string phoneNumberPattern = "[0-9]{2}[ ][0-9]{10}$";
+            Console.WriteLine("Enter your phone Number");
+            String phoneNo = Console.ReadLine();
+            Console.WriteLine(Regex.IsMatch(phoneNo, phoneNumberPattern) ? $"{phoneNo} is Valid" : $"{phoneNo} Invalid!! must conuntry code and 10 digit phone Number");
         }
 
     }
