@@ -26,11 +26,20 @@ namespace RegularExpression
         }
         public void PhoneNumber()
         {
-            string phoneNumberPattern = "[0-9]{2}[ ][0-9]{10}$";
+            string phoneNumberPattern = "[0-9]{1,2}[ ][0-9]{10}$";
             Console.WriteLine("Enter your phone Number");
-            String phoneNo = Console.ReadLine();
+            string phoneNo = Console.ReadLine();
             Console.WriteLine(Regex.IsMatch(phoneNo, phoneNumberPattern) ? $"{phoneNo} is Valid" : $"{phoneNo} Invalid!! must conuntry code and 10 digit phone Number");
         }
-
+        public void Password()
+        {
+            while (true)
+            {
+                string passwordPattern = @"\w{8,}";
+                Console.WriteLine("Enter your Password");
+                string password = Console.ReadLine();
+                Console.WriteLine(Regex.IsMatch(password, passwordPattern) ? $"{password} is Valid" : $"{password} Invalid!!");
+            }
+        }
     }
 }

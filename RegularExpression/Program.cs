@@ -8,9 +8,10 @@ namespace RegularExpression
         {
             Console.WriteLine("Welcome To User Registration");
             UserRegistration user = new UserRegistration();
-            user.NameCheck();
-            user.EmailCheck();
-            user.PhoneNumber();
+            //user.NameCheck();
+            //user.EmailCheck();
+            //user.PhoneNumber();
+            user.Password();
         }
     }
 }
