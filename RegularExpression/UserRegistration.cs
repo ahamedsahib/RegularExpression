@@ -37,6 +37,7 @@ namespace RegularExpression
              Console.WriteLine("Enter your Password");
              string password = Console.ReadLine();
              Console.WriteLine(Regex.IsMatch(password, passwordPattern)?$"{password} is Valid":$"{password} Invalid!!");
+           
         }
     }
 }
