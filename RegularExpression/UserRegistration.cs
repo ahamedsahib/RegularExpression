@@ -35,7 +35,7 @@ namespace RegularExpression
         {
             while (true)
             {
-                string passwordPattern = @"\w{8,}";
+                string passwordPattern = "^(?=.{8,}$)(?=.*[A-Z]).*$";
                 Console.WriteLine("Enter your Password");
                 string password = Console.ReadLine();
                 Console.WriteLine(Regex.IsMatch(password, passwordPattern) ? $"{password} is Valid" : $"{password} Invalid!!");
