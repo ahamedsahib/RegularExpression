@@ -10,6 +10,7 @@ namespace RegularExpression
             UserRegistration user = new UserRegistration();
             user.NameCheck();
             user.EmailCheck();
+            user.PhoneNumber();
         }
     }
 }
