@@ -6,9 +6,9 @@ namespace RegularExpression
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome To Regular Expression");
+            Console.WriteLine("Welcome To User Registration");
             UserRegistration user = new UserRegistration();
-            user.UserInputs();
+            user.NameCheck();
         }
     }
 }
