@@ -33,7 +33,7 @@ namespace RegularExpression
         }
         public void Password()
         {
-             string passwordPattern = "^(?=.{8,}$)(?=.*[A-Z]).*$";
+             string passwordPattern = "^(?=.{8,}$)(?=.*[A-Z])(?=.*[0-9]).*$";
              Console.WriteLine("Enter your Password");
              string password = Console.ReadLine();
              Console.WriteLine(Regex.IsMatch(password, passwordPattern)?$"{password} is Valid":$"{password} Invalid!!");
